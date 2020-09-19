@@ -48,7 +48,7 @@ int main(int argc, char *argv[]){
 	}
 	printf("Bind to port %d\n", portno);
 
-	if(listen(sockfd, 10) == 0){
+	if(listen(sockfd, 10) == 0){ // possible to have 10 clients
 		printf("Listening....\n");
 	}else{
 		printf("Error in binding.\n");
@@ -70,7 +70,7 @@ int main(int argc, char *argv[]){
 			exit(1);
 		}
 		printf("Connection accepted from %s:%d\n", inet_ntoa(newAddr.sin_addr), ntohs(newAddr.sin_port));
-
+		// create multiple clients.. max of 10
 		if((childpid = fork()) == 0){
 			
 			close(sockfd);
