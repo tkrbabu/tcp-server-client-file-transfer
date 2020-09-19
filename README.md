@@ -4,6 +4,6 @@ The server listens for TCP connections and saves all the received data from the 
 The client connects to the server and as soon as connection established, sends the content of a file to the server.
 
 
-$ ./server <PORT> <FILE-DIR>
+$ ./server PORT /Directory
 
-$ ./client <HOSTNAME-OR-IP> <PORT> <FILENAME>
+$ ./client IPaddress PORT Filename 
